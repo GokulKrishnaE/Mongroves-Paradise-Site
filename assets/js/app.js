@@ -117,6 +117,64 @@ $(document).ready(function(){
     }
   });
 
+  const sections = document.querySelectorAll('.section');
+  const bannerSection = document.querySelector('.hero-banner');
+
+  const observerOptions = {
+    threshold: 0.1
+  };
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      const items = entry.target.querySelectorAll('.section-title,.subhead,.roomWrapper');
+      if (entry.isIntersecting) {
+        items.forEach(item=>{
+          item.classList.add('visible');
+        })
+      } else {
+        items.forEach(item=>{
+          item.classList.remove('visible');
+        })
+      }
+    });
+  }, observerOptions);
+  const bannerObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      const bannerTitle = entry.target.querySelectorAll('h1');
+      if (entry.isIntersecting) {
+        bannerTitle.forEach(banner=>{
+          banner.classList.add('visible');
+        })
+      } 
+      // else {
+      //   bannerTitle.forEach(banner=>{
+      //     banner.classList.remove('visible');
+      //   })
+      // }
+    });
+  }, observerOptions);
+  // const observer2 = new IntersectionObserver((entries, observer) => {
+  //   entries.forEach(entry => {
+  //     const roomWrappers = entry.target.querySelectorAll('.roomWrapper');
+  //     if (entry.isIntersecting) {
+  //       roomWrappers.forEach(room=>{
+  //         room.classList.add('visible');
+  //       })
+  //     } else {
+  //       roomWrappers.forEach(room=>{
+  //         room.classList.add('visible');
+  //       })
+  //     }
+  //   });
+  // }, observerOptions);
+
+  sections.forEach(section => {
+    observer.observe(section);
+    // observer2.observe(section);
+    // observer3.observe(section);
+  });
+  bannerObserver.observe(bannerSection);
+
     
 
   $('.match-height').matchHeight()
@@ -155,6 +213,10 @@ $(document).ajaxStop(function(){
   $('.match-height').matchHeight()
   $('.card-content .card-top').matchHeight()
   $('[data-bs-toggle="tooltip"]').tooltip()
+
+  $(".backToTop").click(function () {
+    $("html, body").animate({scrollTop: 0}, 1000);
+ });
 
   $('.navbar-toggler').click(function(){
     $('.mobileMenuOverlay').toggleClass('active')
