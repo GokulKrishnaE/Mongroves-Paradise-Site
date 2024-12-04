@@ -1,5 +1,17 @@
 $(document).ready(function(){
     
+$('.datepicker').daterangepicker();
+
+$('input[name="paymentMode"]').change(function(){
+  if($(this).val() == 'payInHand'){
+    $('.qrCodebox').hide()
+    $('.payInHandBox').show()
+  }
+  else{
+    $('.qrCodebox').show()
+    $('.payInHandBox').hide()
+  }
+})
 // include html
   let includes = $('[data-include]')
   jQuery.each(includes, function(){
@@ -214,6 +226,8 @@ $(document).ajaxStop(function(){
   $('.card-content .card-top').matchHeight()
   $('[data-bs-toggle="tooltip"]').tooltip()
 
+  $('.datepicker').daterangepicker();
+
   $(".backToTop").click(function () {
     $("html, body").animate({scrollTop: 0}, 1000);
  });
@@ -292,9 +306,14 @@ $('#clients-slider').slick({
 
 $('.desktopHamburger').click(function () {
   $('.deskHamburgerBox').addClass('visible')
+  $('html').addClass('overflow-hidden')
 })
 $('#deskHamburgerClose').click(function () {
   $('.deskHamburgerBox').removeClass('visible')
+  $('html').removeClass('overflow-hidden')
+})
+$('.navbar-toggler').click(function () {
+  $('html,body').toggleClass('overflow-hidden')
 })
 
 
