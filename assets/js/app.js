@@ -130,7 +130,7 @@ $('input[name="paymentMode"]').change(function(){
   });
 
   const sections = document.querySelectorAll('.section');
-  const bannerSection = document.querySelector('.hero-banner');
+  const bannerSection = document.querySelector('.bannerSec');
 
   const observerOptions = {
     threshold: 0.1
@@ -158,11 +158,11 @@ $('input[name="paymentMode"]').change(function(){
           banner.classList.add('visible');
         })
       } 
-      // else {
-      //   bannerTitle.forEach(banner=>{
-      //     banner.classList.remove('visible');
-      //   })
-      // }
+      else {
+        bannerTitle.forEach(banner=>{
+          banner.classList.remove('visible');
+        })
+      }
     });
   }, observerOptions);
   // const observer2 = new IntersectionObserver((entries, observer) => {
