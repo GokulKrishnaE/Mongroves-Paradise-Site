@@ -4,11 +4,11 @@ $('.datepicker').daterangepicker();
 
 $('input[name="paymentMode"]').change(function(){
   if($(this).val() == 'payInHand'){
-    $('.qrCodebox').hide()
+    $('.PayQr').hide()
     $('.payInHandBox').show()
   }
   else{
-    $('.qrCodebox').show()
+    $('.PayQr').show()
     $('.payInHandBox').hide()
   }
 })
@@ -190,6 +190,7 @@ $('input[name="paymentMode"]').change(function(){
     
 
   $('.match-height').matchHeight()
+  $('.matchHeightContent').matchHeight()
 
   $('.navbar-toggler').click(function(){
     $('body').toggleClass('overflow-hidden')
