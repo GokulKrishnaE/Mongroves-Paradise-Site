@@ -43,7 +43,7 @@ $('input[name="paymentMode"]').change(function(){
     slidesPerView: 1,
     pagination: false
   });
-  new Swiper('.room-images-slider', {
+  new Swiper('.bookingRoomSlider', {
     speed: 400,
     loop: true,
     autoplay: {
@@ -51,6 +51,19 @@ $('input[name="paymentMode"]').change(function(){
       disableOnInteraction: false
     },
     slidesPerView: 1,
+    pagination: {
+      el: ".swiper-pagination",
+      type: 'bullets',
+      clickable: true
+    },
+  });
+  new Swiper('.room-images-slider', {
+    speed: 400,
+    loop: true,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false
+    },
     pagination: false
   });
   new Swiper('.room-images-slider2', {
