@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mangroves Paradise | Home Stay</title>
+
+    <link rel="stylesheet" href="./assets/css/bootstrap.css">
+    <link rel="stylesheet" href="./assets/css/app.css">
+
+    <link rel="shortcut icon" href="./assets/images/logo.png" type="image/x-icon">
+</head>
+<body>
+   <div class="wrapper subPage">
+    <header data-include="header"></header>
+    <main>
+        <div class="subPageBanner bannerSec">
+            <div>
+                <h1>Book Your Rooms</h1>
+            </div>
+        </div>
+        <div class="section">
+            <div class="container">
+                <h3 class="subhead">Leave Us Your Info</h3>
+                <h2 class="section-title mb-5">Room 1</h2>
+                <div class="row gx-5 flex-column-reverse flex-lg-row">
+                    <div class="col-lg-6">
+                        <div class="step step1 active">
+                            <div class="checkInDateCount">
+                                <div class="checkin">
+                                    <p class="label">Check In</p>
+                                    <input type="text" class="datepicker form-control date" value="12/10/2024">
+                                </div>
+                                <div class="checkOut">
+                                    <p class="label">Check Out</p>
+                                    <input type="text" class="datepicker form-control date" value="12/10/2024">
+                                </div>
+                                <button class="btn btn-primary btn-sm nextButton" data-step="step2">Check Availability</button>
+                            </div>
+                        </div>
+                        <div class="step step2" id="step2">
+                            <div class="row">
+                                <p class="fs20 mb-0">Room is available for the selected dates</p>
+                                <div class="my-4">
+                                    <p class="fw-bold text-primary-dark fs20">Price</p>
+                                    <p class="roomPrice">₹ 4000.00</p>
+                                </div>
+                                <p class="fw-bold text-primary-dark text-primary-dark fs20">Please enter your address</p>
+                                <div class="col-lg-6">
+                                    <div class="form-floating mb-3">
+                                        <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                                        <label for="floatingPassword">Name</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-floating mb-3">
+                                        <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                                        <label for="floatingPassword">Phone</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating mb-3">
+                                        <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                                        <label for="floatingPassword">Address Line 1</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating mb-3">
+                                        <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                                        <label for="floatingPassword">Address Line 2</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-floating mb-3">
+                                        <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                                        <label for="floatingPassword">PIN Code</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-floating mb-3">
+                                        <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                                        <label for="floatingPassword">Email</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-center mt-4">
+                                <button class="btn btn-primary nextButton" data-step="step3">Make Payment</button>
+                            </div>
+                        </div>
+                        <div class="step step3" id="step3">
+                            <div class="row">
+                                <p class="fw-bold text-primary-dark fs20 mt-4 mt-lg-0">Payment Mode</p>
+                                <div class="col-12">
+                                    <div class="d-flex align-items-center gap-5">
+                                        <div>
+                                            <input type="radio" id="upi" name="paymentMode" checked value="upi">
+                                            <label for="upi">UPI</label>
+                                        </div>
+                                        <div>
+                                            <input type="radio" id="payInHand" name="paymentMode" value="payInHand">
+                                            <label for="payInHand">Pay in Hand</label>
+                                        </div> 
+                                    </div>
+                                    <div class="PayQr">
+                                        <div class="qrCodebox">
+                                            <img src="./assets/images/qr.jpeg" alt="" class="img-fluid">
+                                        </div>
+                                        <p class="mt-4">Please show the transaction reciept when you check in. </p>
+                                    </div>
+                                    <div class="payInHandBox">
+                                        <p>Please pay the amount when you check in</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-4 pt-4 text-center">
+                                <a href="booking-confirmation.html" class="btn btn-primary">Book Now <i class="fas fa-arrow-right ms-3"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                       <div class="bookingRoomPhotos">
+                            <div class="swiper bookingRoomSlider">
+                            <div class="swiper-wrapper">
+                              <div class="swiper-slide">
+                                <img src="./assets/images/room1.1.jfif" alt="">
+                              </div>
+                              <div class="swiper-slide">
+                                <img src="./assets/images/room1.2.JPG" alt="">
+                              </div>
+                              <div class="swiper-slide">
+                                <img src="./assets/images/room1_bathroom.png" alt="">
+                              </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                          </div>
+                       </div>
+                    </div>
+                </div> 
+            </div>
+        </div>
+    </main>
+    <footer data-include="footer"></footer>
+   </div>
+
+
+   <script src="./assets/js/jquery.js"></script>
+   <script src="./assets/js/bootstrap.bundle.min.js"></script>
+   <script src="./assets/js/plugins.js"></script>
+   <script src="./assets/js/app.js"></script>
+</body>
+</html>
